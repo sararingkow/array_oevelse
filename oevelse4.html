@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array test</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Øvelse 1</a>
+        <a href="oevelse2.html">Øvelse 2</a>
+        <a href="oevelse3.html">Øvelse 3</a>
+        <a href="oevelse4.html">Øvelse 4</a>
+    </header>
+    <hr>
+    <h2>4. Yndlings (rock)bands</h2>
+    <template>
+        <article>
+            <h3></h3>
+            <p></p>
+            <img src="" alt="">
+        </article>
+    </template>
+
+    <script>
+        const bands = [{
+            name: "Nightwish",
+            formed: "1996",
+            albums: ["Imaginaerum", " Once", " Oceanborn", " Human :||: Nature", 5],
+            members: ["Floor Jansen", " Tuomas Holopainen", " Troy Donockley", " Emppu Vuorinen", " Kai Hahto", " Jukka Koskinen"],
+            img: "nightwish_toronto_concert_2022.jpeg"
+        },
+        {
+            name: "Within Temptation",
+            formed: "1996",
+            albums: ["The Unforgiving", " Resist", " The Heart of Everything", " Hydra", " The Silent Force", 4],
+            members: ["Sharon Den Adel", " Jeroen van Veen", " Ruud Jolie", " Martijn Spierenburg", " Mike Coolen", " Stefan Helleblad"],
+            img: "within_temptation_2011.jpeg"
+        },
+        {
+            name: "Evanescence",
+            formed: "1994",
+            albums: ["Fallen", " The Bitter Truth", " Synthesis", " Lost Whispers", " The Open Door", 3],
+            members: ["Amy Lee", " Tim McCord", " Will Hunt", " Troy McLawhorn", " Emma Anzai"],
+            img: "evanescence_-_rock_am_ring_2023-7536.jpeg"
+        }
+        ];
+
+        const template = document.querySelector("template").content;
+        bands.forEach(visBands);
+
+        function visBands(band) {
+            const clone = template.cloneNode(true);
+            console.log("clone", clone);
+            console.log("band", band);
+            clone.querySelector("h3").textContent = "Navn: " + band.name;
+            clone.querySelector("p").textContent += "Medlemmer: " + band.members;
+            clone.querySelector("img").src = band.img;
+            clone.querySelector("img").alt = band.name;
+
+            const container = document.querySelector("body");
+            container.appendChild(clone);
+
+
+        }
+    </script>

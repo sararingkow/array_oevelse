@@ -28,5 +28,6 @@ li {
 }
 
 img {
-  min-width: 330px;
+  width: 30%;
+  height: 300px;
 }
