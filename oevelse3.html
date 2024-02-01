@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array test</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Øvelse 1</a>
+        <a href="oevelse2.html">Øvelse 2</a>
+        <a href="oevelse3.html">Øvelse 3</a>
+    </header>
+    <hr>
+    <h2>3. Yndlings musiker/band</h2>
+    <h3></h3>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <img src="" alt="">
+
+    <script>
+        const favouriteMusician = {
+            name: "Jim Yosef",
+            releases: ["Devil's Lullaby", " Animal", " Hate You", " Stamp On The Ground"],
+            img: "channels4_profile.jpg"
+        }
+
+        const musicianInfo = {
+            country: "Sverige",
+            debut: "Lights",
+            ncs: "30"
+        }
+
+        const h3 = document.querySelector("h3");
+        const p = document.querySelector("p");
+        const img = document.querySelector("img");
+
+
+        h3.textContent = "Én af mine yndlingsmusikere er " + favouriteMusician.name;
+        p.textContent += " Han er født og opvokset i " + musicianInfo.country;
+        p.textContent += ", og udgav hans første sang der hed " + musicianInfo.debut + " den 2. Maj 2015.";
+        p.textContent += " Han har bl.a. lavet " + favouriteMusician.releases + ", osv.";
+        p.textContent += " Han har lavet " + musicianInfo.ncs + " sange i alt for NCS."
+        img.src = favouriteMusician.img;
+        img.alt = "profilbillede";
+
+
+    </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array test</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Øvelse 1</a>
+        <a href="oevelse2.html">Øvelse 2</a>
+        <a href="oevelse3.html">Øvelse 3</a>
+    </header>
+    <hr>
+    <h2>2. Playliste</h2>
+    <ul></ul>
+
+    <script>
+        const favouriteMusician = {
+            name: "Jim Yosef",
+            releases: ["Devil's Lullaby", "Animal", "Hate You", "Stamp On The Ground"]
+        }
+        const music = ["Devil's Lullaby - Jim Yosef", "Take Me - Andromedik", "Invincible - Escape the Fate", "Luminary - Joel Sunny", "Bad Feeling - Jagwar Twin", "THE DEATH OF PEACE OF MIND - Bad Omens", "Unholy.plague - Jan Ignacy Królikowski", "City of the Dead - Eurielle", "Yami - T's MUSIC", "Calcifer - Jon Björk"]
+        const ul = document.querySelector("ul")
+
+        music.forEach(playListe)
+        function playListe(music, index) {
+            console.log(music, index)
+            ul.innerHTML += "<li>" + music + "</li>"
+        }
+    </script>
+</body>
+
+</html>

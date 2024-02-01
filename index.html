@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array test</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Øvelse 1</a>
+        <a href="oevelse2.html">Øvelse 2</a>
+        <a href="oevelse3.html">Øvelse 3</a>
+    </header>
+    <hr>
+    <h1>Array øvelser</h1>
+    <h2>1. Frugtliste</h2>
+    <ul></ul>
+    <script>
+
+        const frugter = ["Banan", "Æble", "Appelsin", "Grape"];
+        const ul = document.querySelector("ul");
+
+        frugter.forEach(bygListe);
+        function bygListe(elm, index) {
+            console.log(elm, index)
+            ul.innerHTML += "<li>" + elm + "</li>"
+        }
+    </script>
+</body>
+
+</html>
